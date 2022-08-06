@@ -1,0 +1,13 @@
+apiVersion: anutosh491.dev/v1alpha1
+kind: Digital_Ocean_Cluster
+metadata:
+  name: Digital_Ocean_Cluster_1
+spec:
+  name: Digital_Ocean_Cluster_1
+  region: "nyc1"
+  version: "1.21.3-do.0"
+  tokenSecret: "default/dosecret"
+  nodePools:
+    - count: 3
+      name: "dummy-nodepool"
+      size: "s-2vcpu-2gb"
