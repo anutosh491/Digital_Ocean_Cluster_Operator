@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: Digital_Ocean_Cluster
+  name: Digital_Ocean_Cluster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Digital_Ocean_Cluster
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: Digital_Ocean_Cluster
+    spec:
+      containers:
+      - image: anutosh491/Digital_Ocean_Cluster:0.1.0
+        name: Digital_Ocean_Cluster
+        resources: {}
+      serviceAccountName: Digital_Ocean_Cluster-sa
+status: {}
